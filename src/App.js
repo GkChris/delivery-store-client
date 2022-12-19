@@ -14,24 +14,29 @@ function App() {
   
   return (
     <div className="App">
-      <table>
-        <thead>
-          <th>Items</th>
-          <th>Total Price</th>
-          <th>Currency</th>
-        </thead>
-        <tbody>
-          {orders?.map((order) => {
-            return <tr>
-              <td>{order.items.map((item) => {
-                return <p>Item: {item?.name}: Quantity: {item?.quantity} - Price: {item?.price}</p>
-              })}</td>
-              <td>{order?.totalPrice}</td>
-              <td>{order?.currency}</td>
-            </tr>
-          })}
-        </tbody>
-      </table>
+      <div className='container'>
+        <h1>Active Orders</h1>
+        <table>
+          <thead>
+            <th># Order</th>
+            <th>Items</th>
+            <th>Total Price</th>
+            <th>Currency</th>
+          </thead>
+          <tbody>
+            {orders?.map((order, i) => {
+              return <tr>
+                <td>{i}</td>
+                <td>{order.items.map((item) => {
+                  return <p>Item: {item?.name}: Quantity: {item?.quantity} - Price: {item?.price}</p>
+                })}</td>
+                <td>{order?.totalPrice}</td>
+                <td>{order?.currency}</td>
+              </tr>
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

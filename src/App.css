@@ -1,8 +1,32 @@
 table{
-  width: 50%;
-  margin: auto;
+  width: 75%;
+  margin: 2rem auto;
+  text-align: center;
 }
 
 td{
-  border: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+th{
+  border-bottom: 3px solid black;
+}
+
+h1{
+  border-bottom: 3px solid black;
+  margin: auto 3rem;
+}
+
+.App{
+  text-align: center;
+  width: 100%;
+  background-image: url('/public/bgImage.jpg');
+}
+
+.container{
+  padding-top: 4rem;
+  min-height: 100vmin;
+  width: 50%;
+  margin: auto;
+  background-color: lightgrey;
 }
